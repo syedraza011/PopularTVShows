@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = TVShowsViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView(){
+            VStack{
+              ForEach (viewModel.tvshows){ show in
+                    Text(show.originalName)
+                }
+            }
+            
+        }.onAppear(){
+                viewModel.getTVShows()
         }
-        .padding()
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+

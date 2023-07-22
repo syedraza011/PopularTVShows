@@ -16,9 +16,10 @@
 		E9A988AA2A6C2D460081FAE6 /* PopularTVShowsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A988A92A6C2D460081FAE6 /* PopularTVShowsUITestsLaunchTests.swift */; };
 		E9A988BA2A6C2D7B0081FAE6 /* TVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A988B92A6C2D7B0081FAE6 /* TVShowService.swift */; };
 		E9A988BD2A6C2DBE0081FAE6 /* TVShowResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A988BC2A6C2DBE0081FAE6 /* TVShowResponse.swift */; };
-		E9A988BF2A6C2DD60081FAE6 /* TVShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A988BE2A6C2DD60081FAE6 /* TVShowViewModel.swift */; };
+		E9A988BF2A6C2DD60081FAE6 /* TVShowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A988BE2A6C2DD60081FAE6 /* TVShowsViewModel.swift */; };
 		E9A988C32A6C2E350081FAE6 /* SingleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A988C22A6C2E350081FAE6 /* SingleCellView.swift */; };
 		E9A988C52A6C2E610081FAE6 /* Target_ImageorScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A988C42A6C2E610081FAE6 /* Target_ImageorScreen.png */; };
+		E9A988C92A6C372E0081FAE6 /* AsyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A988C82A6C372E0081FAE6 /* AsyncState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +52,11 @@
 		E9A988A92A6C2D460081FAE6 /* PopularTVShowsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTVShowsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E9A988B92A6C2D7B0081FAE6 /* TVShowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowService.swift; sourceTree = "<group>"; };
 		E9A988BC2A6C2DBE0081FAE6 /* TVShowResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowResponse.swift; sourceTree = "<group>"; };
-		E9A988BE2A6C2DD60081FAE6 /* TVShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowViewModel.swift; sourceTree = "<group>"; };
+		E9A988BE2A6C2DD60081FAE6 /* TVShowsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewModel.swift; sourceTree = "<group>"; };
 		E9A988C22A6C2E350081FAE6 /* SingleCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCellView.swift; sourceTree = "<group>"; };
 		E9A988C42A6C2E610081FAE6 /* Target_ImageorScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target_ImageorScreen.png; sourceTree = "<group>"; };
+		E9A988C62A6C356C0081FAE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E9A988C82A6C372E0081FAE6 /* AsyncState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		E9A9888B2A6C2D430081FAE6 /* PopularTVShows */ = {
 			isa = PBXGroup;
 			children = (
+				E9A988C62A6C356C0081FAE6 /* Info.plist */,
 				E9A988B62A6C2D590081FAE6 /* Screens */,
 				E9A9888C2A6C2D430081FAE6 /* PopularTVShowsApp.swift */,
 				E9A988902A6C2D450081FAE6 /* Assets.xcassets */,
@@ -140,6 +144,7 @@
 		E9A988B62A6C2D590081FAE6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E9A988C72A6C371D0081FAE6 /* Shared */,
 				E9A988C42A6C2E610081FAE6 /* Target_ImageorScreen.png */,
 				E9A988B72A6C2D640081FAE6 /* Views */,
 				E9A988BB2A6C2D9F0081FAE6 /* Model */,
@@ -169,9 +174,17 @@
 			isa = PBXGroup;
 			children = (
 				E9A988BC2A6C2DBE0081FAE6 /* TVShowResponse.swift */,
-				E9A988BE2A6C2DD60081FAE6 /* TVShowViewModel.swift */,
+				E9A988BE2A6C2DD60081FAE6 /* TVShowsViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E9A988C72A6C371D0081FAE6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E9A988C82A6C372E0081FAE6 /* AsyncState.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,12 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A988C92A6C372E0081FAE6 /* AsyncState.swift in Sources */,
 				E9A9888F2A6C2D430081FAE6 /* ContentView.swift in Sources */,
 				E9A988BD2A6C2DBE0081FAE6 /* TVShowResponse.swift in Sources */,
 				E9A9888D2A6C2D430081FAE6 /* PopularTVShowsApp.swift in Sources */,
 				E9A988BA2A6C2D7B0081FAE6 /* TVShowService.swift in Sources */,
 				E9A988C32A6C2E350081FAE6 /* SingleCellView.swift in Sources */,
-				E9A988BF2A6C2DD60081FAE6 /* TVShowViewModel.swift in Sources */,
+				E9A988BF2A6C2DD60081FAE6 /* TVShowsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +486,7 @@
 				DEVELOPMENT_TEAM = G9Z86K3593;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = PopularTVShows/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -501,7 +515,7 @@
 				DEVELOPMENT_TEAM = G9Z86K3593;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = PopularTVShows/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
