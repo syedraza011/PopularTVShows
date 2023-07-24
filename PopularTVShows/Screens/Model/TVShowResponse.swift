@@ -6,19 +6,20 @@
 //
 
 import Foundation
-struct TVShowResponse: Decodable {
+struct TVShowResponse: Codable{
     
-    let results: [shows]
+    let results: [Shows]
 }
-struct shows: Identifiable,Decodable {
+struct Shows: Codable {
     
     var id = UUID()
     let originalName: String
     let originalLanguage: String
     let popularity: Double
-    let posterPath: String
+    let posterPath: String?
     let voteAverage: Double
     let voteCount: Int
+   
     enum CodingKeys: String, CodingKey {
             case originalName = "original_name"
             case originalLanguage = "original_language"

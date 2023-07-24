@@ -14,13 +14,14 @@ struct ContentView: View {
         NavigationView(){
             VStack{
               ForEach (viewModel.tvshows){ show in
-                    Text(show.originalName)
+                  Text(show.results.description)
                 }
             }
             
-        }.onAppear(){
-                viewModel.getTVShows()
         }
+            .onAppear(){
+                viewModel.getTVShows()
+        }.navigationTitle("Best TV Shows")
     }
 }
 struct ContentView_Previews: PreviewProvider {

@@ -108,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				E9A988C62A6C356C0081FAE6 /* Info.plist */,
+				E9A988C42A6C2E610081FAE6 /* Target_ImageorScreen.png */,
 				E9A988B62A6C2D590081FAE6 /* Screens */,
 				E9A9888C2A6C2D430081FAE6 /* PopularTVShowsApp.swift */,
 				E9A988902A6C2D450081FAE6 /* Assets.xcassets */,
@@ -145,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				E9A988C72A6C371D0081FAE6 /* Shared */,
-				E9A988C42A6C2E610081FAE6 /* Target_ImageorScreen.png */,
 				E9A988B72A6C2D640081FAE6 /* Views */,
 				E9A988BB2A6C2D9F0081FAE6 /* Model */,
 				E9A988B82A6C2D6E0081FAE6 /* Network */,
